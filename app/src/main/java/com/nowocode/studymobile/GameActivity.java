@@ -31,14 +31,14 @@ public class GameActivity extends Activity {
         courseLabel = (TextView) findViewById(R.id.courseLabel);
         countLabel = (TextView) findViewById(R.id.countLabel);
         prevButton = (Button) findViewById(R.id.prevButton);
-        prevButton.setClickable(false);
         makeCustomEntry("question one", "answer one", "test class");
         makeCustomEntry("question two", "answer two", "test class");
         makeCustomEntry("question three", "answer three", "test class");
         makeCustomEntry("question four", "answer four", "course one");
         makeCustomEntry("question four", "answer five", "another class");
-        getQuestionSet("another class");
+        getQuestionSet("test class");
         setTextLabels();
+        setCountLabel();
     }
 
     private void setTextLabels(){
@@ -53,20 +53,26 @@ public class GameActivity extends Activity {
         questionSet = dbHelper.getQuestionSet(c);
     }
 
+    private void setCountLabel(){
+        countLabel.setText(index + "/" + (questionSet.size()-1));
+    }
+
     //Method called when clicking prev Button
     public void prevClick(View view){
         if(index > 0 && index < questionSet.size()) {
             index--;
             setTextLabels();
+            setCountLabel();
         }
     }
 
     //Method called when clicking Next Button
     public void nextClick(View view){
-        if(index >= 0 && index < questionSet.size()) {
+        if(index >= 0 && index < questionSet.size()-1) {
             index++;
             setTextLabels();
             System.out.println(questionSet.size());
+            setCountLabel();
             }
         }
 }
