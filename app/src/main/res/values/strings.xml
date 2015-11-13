@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Study Mobile</string>
+    <string name="action_settings">Settings</string>
+    <string name="courseLabel">Course</string>
+    <string name="questionLabel">Question</string>
+    <string name="answerLabel">Answer</string>
+    <string name="playButton">Play</string>
+    <string name="editButton">Edit</string>
+    <string name="newCourseButton">New Course</string>
+    <string name="countLabel">Questions:</string>
+</resources>
