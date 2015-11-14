@@ -48,6 +48,25 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
         db.execSQL(query);
 
     }
+
+    public String[] getCourses(){
+        String[] courses = null;
+        ArrayList<String> tempResults = new ArrayList<>();
+        String query = "SELECT distinct course from " + QuestionDbContract.QuestionEntry.TABLE_NAME;
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery(query,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            tempResults.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        courses = new String[tempResults.size()];
+
+        //converting the ArrayList into a static String Array
+        for(int i = 0; i < tempResults.size(); i++)
+            courses[i] = tempResults.get(i);
+        return courses;
+    }
     public ArrayList<QuestionSet> getQuestionSet(String course) {
         String query = " Select question,answer from " + QuestionDbContract.QuestionEntry.TABLE_NAME +" where course='" + course + "'";
         ArrayList<QuestionSet> results = new ArrayList<QuestionSet>();

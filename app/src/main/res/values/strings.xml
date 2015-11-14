@@ -8,4 +8,7 @@
     <string name="editButton">Edit</string>
     <string name="newCourseButton">New Course</string>
     <string name="countLabel">Questions:</string>
+    <string name="newQuestionButton">New Questions</string>
+    <string name="showButton">show</string>
+    <string name="hideButton">hide</string>
 </resources>

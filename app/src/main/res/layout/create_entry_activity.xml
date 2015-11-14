@@ -3,27 +3,26 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/answerText"
-        android:layout_marginTop="78dp"
-        android:layout_below="@+id/answerLabel"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Answer"
+        android:id="@+id/answerLabel"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="198dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/questionText"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/answerText"
-        android:layout_marginTop="89dp"
-        android:layout_alignStart="@+id/answerText" />
+        android:id="@+id/answerText"
+        android:layout_alignTop="@+id/answerLabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="71dp"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,14 +31,18 @@
         android:text="Question"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Answer"
-        android:id="@+id/answerLabel"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/questionText"
+        android:layout_marginTop="81dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

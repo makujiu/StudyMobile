@@ -4,36 +4,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#BBDEFB">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/editButton"
-        android:id="@+id/editButton"
-        android:layout_gravity="center_vertical"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/playButton"
-        android:layout_alignEnd="@+id/playButton" />
-
-    <Button
-        android:layout_width="303dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/playButton"
         android:id="@+id/playButton"
 
         android:onClick="playGame"
-        android:layout_above="@+id/editButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp" />
+        android:background="#95b1c8"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:alpha=".8"
+        android:layout_marginBottom="164dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/newCourseButton"
         android:id="@+id/newCourseButton"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="164dp"
-        android:layout_alignStart="@+id/editButton"
-        android:layout_alignEnd="@+id/editButton" />
+        android:background="#95b1c8"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/courseSpinner"
+        android:clickable="false"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:longClickable="false"
+        android:focusableInTouchMode="false"
+        android:layout_marginBottom="150dp"
+        android:layout_above="@+id/newCourseButton"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Select your Course"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/courseSpinner"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
