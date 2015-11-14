@@ -11,4 +11,6 @@
     <string name="newQuestionButton">New Questions</string>
     <string name="showButton">show</string>
     <string name="hideButton">hide</string>
+    <string name="saveButton">Save</string>
+    <string name="selectButton">Select</string>
 </resources>

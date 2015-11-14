@@ -8,35 +8,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Course Name"
-        android:id="@+id/textView3"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80dp"
-        android:textSize="35dp"
-        android:textColor="#FFFFFF" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/courseEditText"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="180dp"
-        android:textColor="#FFFFFF"
-        android:textSize="35dp"
-        android:textAlignment="center"
-        android:inputType="text|textCapWords" />
+        android:text="Course: -"
+        android:id="@+id/courseSelectionLabel"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/saveButton"
-        android:id="@+id/saveButton"
+        android:text="play"
+        android:id="@+id/playButton"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:textSize="20dp"
         android:background="#95b1c8"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:onClick="saveCourse"
-        android:nestedScrollingEnabled="false" />
+        android:layout_marginTop="150dp" />
 
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="add questions"
+        android:id="@+id/addButton"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:background="#95b1c8"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="edit"
+        android:id="@+id/editButton"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:background="#95b1c8"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="30dp" />
 </LinearLayout>

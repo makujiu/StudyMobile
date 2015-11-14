@@ -26,6 +26,12 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateCourseActivity"
+            android:label="Create Course"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MenuActivity"
+            android:label="Main Menu"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

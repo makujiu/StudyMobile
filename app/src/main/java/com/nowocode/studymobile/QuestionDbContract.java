@@ -9,7 +9,7 @@ public class QuestionDbContract {
     public QuestionDbContract() {};
 
     public static abstract class QuestionEntry implements BaseColumns{
-        public static String TABLE_NAME="testingTable";
+        public static String TABLE_NAME="questions";
         public static final String COLUMN_NAME_QUESTION ="question";
         public static final String COLUMN_NAME_ANSWER ="answer";
         public static final String COLUMN_NAME_COURSE ="course";

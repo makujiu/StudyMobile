@@ -35,12 +35,6 @@ public class GameActivity extends Activity {
         countLabel = (TextView) findViewById(R.id.countLabel);
         prevButton = (Button) findViewById(R.id.prevButton);
         displayBtn = (Button) findViewById(R.id.displayAnswerBtn);
-        makeCustomEntry("question one", "answer one", "test class");
-        makeCustomEntry("question two", "answer two", "test class");
-        makeCustomEntry("question three", "answer three", "test class");
-        makeCustomEntry("question four", "answer four", "course one");
-        makeCustomEntry("question four", "answer five", "another class");
-        getQuestionSet("test class");
         setTextLabels();
         setCountLabel();
         showAnswer(false);

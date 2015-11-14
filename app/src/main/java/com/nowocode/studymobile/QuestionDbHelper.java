@@ -46,9 +46,14 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
                 + "','" + course + "');";
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL(query);
-
+        db.close();
     }
 
+    public void customQuery(String query){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL(query);
+        db.close();
+    }
     public String[] getCourses(){
         String[] courses = null;
         ArrayList<String> tempResults = new ArrayList<>();
@@ -65,6 +70,7 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
         //converting the ArrayList into a static String Array
         for(int i = 0; i < tempResults.size(); i++)
             courses[i] = tempResults.get(i);
+        db.close();
         return courses;
     }
     public ArrayList<QuestionSet> getQuestionSet(String course) {
@@ -77,6 +83,7 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
             results.add(new QuestionSet(cursor.getString(0), cursor.getString(1), course));
             cursor.moveToNext();
         }
+        db.close();
         return results;
     }
 }

@@ -9,12 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
-    Button playBtn;
+    Button selectBtn;
     Button newCourseBtn;
     Button editBtn;
     Spinner courseSpinner;
@@ -26,11 +27,26 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new QuestionDbHelper(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        selectBtn = (Button) findViewById(R.id.selectButton);
+        selectBtn.setEnabled(false);
         courseSpinner = (Spinner) findViewById(R.id.courseSpinner);
         initCourseList();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item, courseList);
         courseSpinner.setAdapter(adapter);
 
+        courseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    selectBtn.setEnabled(true);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                selectBtn.setEnabled(false);
+            }
+        });
     }
 
     private void initCourseList(){
@@ -44,13 +60,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //play Button Listener
+    //user Clicks on Play Button
     public void playGame(View view){
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
+
     }
 
+    //user Clicks on Select Button
+    public void select(View view){
+        Intent intent = new Intent(this,MenuActivity.class);
+        intent.putExtra("course",courseSpinner.getSelectedItem().toString());
+        startActivity(intent);
+    }
 
+    //User clicks on new Course Button
+    public void createCourse(View view){
+        Intent intent = new Intent(this, CreateCourseActivity.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
