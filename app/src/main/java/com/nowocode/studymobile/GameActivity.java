@@ -64,12 +64,6 @@ public class GameActivity extends Activity {
         questionLabel.setText(questionSet.get(index).getQuestion());
         courseLabel.setText(questionSet.get(index).getCourse());
     }
-    private void makeCustomEntry(String q, String a, String c){
-        dbHelper.makeEntry(q, a, c);
-    }
-    private void getQuestionSet(String c){
-        questionSet = dbHelper.getQuestionSet(c);
-    }
 
     private void setCountLabel(){
         countLabel.setText(index + "/" + (questionSet.size()-1));

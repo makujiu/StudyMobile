@@ -14,6 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     Button selectBtn;
     Button newCourseBtn;
@@ -69,8 +71,18 @@ public class MainActivity extends AppCompatActivity {
 
     //user Clicks on Select Button
     public void select(View view){
+        String course = courseSpinner.getSelectedItem().toString();
         Intent intent = new Intent(this,MenuActivity.class);
-        intent.putExtra("course",courseSpinner.getSelectedItem().toString());
+        ArrayList<String> questions = new ArrayList<>();
+        ArrayList<String> answers = new ArrayList<>();
+        ArrayList<QuestionSet> tempResults = dbHelper.getQuestionSet(course);
+        for(QuestionSet temp : tempResults){
+            questions.add(temp.getQuestion());
+            answers.add(temp.getAnswer());
+        }
+        intent.putExtra("questions",questions);
+        intent.putExtra("answers",answers);
+        intent.putExtra("course", course);
         startActivity(intent);
     }
 
