@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     String[] courseList;
     QuestionDbHelper dbHelper;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         dbHelper = new QuestionDbHelper(this);
@@ -35,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         initCourseList();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item, courseList);
         courseSpinner.setAdapter(adapter);
-
         courseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 
@@ -73,15 +73,6 @@ public class MainActivity extends AppCompatActivity {
     public void select(View view){
         String course = courseSpinner.getSelectedItem().toString();
         Intent intent = new Intent(this,MenuActivity.class);
-        ArrayList<String> questions = new ArrayList<>();
-        ArrayList<String> answers = new ArrayList<>();
-        ArrayList<QuestionSet> tempResults = dbHelper.getQuestionSet(course);
-        for(QuestionSet temp : tempResults){
-            questions.add(temp.getQuestion());
-            answers.add(temp.getAnswer());
-        }
-        intent.putExtra("questions",questions);
-        intent.putExtra("answers",answers);
         intent.putExtra("course", course);
         startActivity(intent);
     }

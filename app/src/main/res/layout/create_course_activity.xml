@@ -33,8 +33,8 @@
         android:id="@+id/saveButton"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
-        android:background="#95b1c8"
-        android:textColor="#FFFFFF"
+        android:background="#90CAF9"
+        android:textColor="#E3F2FD"
         android:textSize="20dp"
         android:onClick="saveCourse"
         android:nestedScrollingEnabled="false" />

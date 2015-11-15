@@ -12,12 +12,13 @@
         android:layout_height="wrap_content"
         android:text="@string/newCourseButton"
         android:id="@+id/newCourseButton"
-        android:background="#95b1c8"
-        android:textColor="#FFFFFF"
+        android:background="#90CAF9"
+        android:textColor="#E3F2FD"
         android:textSize="20dp"
         android:onClick="createCourse"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
 
     <Spinner
         android:layout_width="match_parent"
@@ -40,8 +41,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Select your Course"
         android:id="@+id/textView2"
+        android:textColor="#FFFFFF"
         android:layout_above="@+id/courseSpinner"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="200dp"
@@ -49,10 +51,10 @@
         android:text="@string/selectButton"
         android:id="@+id/selectButton"
         android:onClick="select"
-        android:background="#95b1c8"
-        android:textColor="#FFFFFF"
+        android:background="#90CAF9"
+        android:textColor="#E3F2FD"
         android:textSize="20dp"
-        android:alpha=".8"
+        android:alpha="1"
         android:layout_below="@+id/newCourseButton"
         android:layout_marginTop="23dp"
         android:layout_alignEnd="@+id/newCourseButton"

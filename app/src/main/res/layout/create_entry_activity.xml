@@ -55,6 +55,10 @@
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/saveButton"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="#90CAF9"
+        android:textColor="#E3F2FD"
+        android:layout_marginTop="50dp"
+        android:onClick="save" />
 
 </LinearLayout>
