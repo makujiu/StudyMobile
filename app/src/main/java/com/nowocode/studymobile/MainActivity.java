@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -27,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        dbHelper = new QuestionDbHelper(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dbHelper = new QuestionDbHelper(this);
         selectBtn = (Button) findViewById(R.id.selectButton);
         selectBtn.setEnabled(false);
         courseSpinner = (Spinner) findViewById(R.id.courseSpinner);

@@ -8,12 +8,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Answer"
+        android:text="Question"
         android:id="@+id/answerLabel"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="0dp"
-        android:textColor="#FFFFFF"
+        android:textColor="#E3F2FD"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp" />
 
@@ -32,12 +32,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Question"
+        android:text="Answer"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:textColor="#FFFFFF"
+        android:textColor="#E3F2FD"
         android:layout_gravity="center_horizontal" />
     <EditText
         android:layout_width="match_parent"

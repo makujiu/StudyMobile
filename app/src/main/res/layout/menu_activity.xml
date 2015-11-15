@@ -12,7 +12,7 @@
         android:id="@+id/courseSelectionLabel"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp"
-        android:textColor="#FFFFFF" />
+        android:textColor="#E3F2FD" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
         android:id="@+id/questionCountLabel"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="15dp"
-        android:textColor="#FFFFFF" />
+        android:textColor="#E3F2FD" />
 
     <Button
         android:layout_width="200dp"
@@ -43,7 +43,7 @@
         android:id="@+id/addButton"
         android:layout_gravity="center_horizontal"
         android:textSize="20dp"
-        android:textColor="#FFFFFF"
+        android:textColor="#E3F2FD"
         android:background="#90CAF9"
         android:layout_marginTop="30dp"
         android:onClick="addQuestions" />
