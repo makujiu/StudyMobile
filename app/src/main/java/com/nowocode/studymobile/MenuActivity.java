@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -50,7 +51,10 @@ public class MenuActivity extends Activity {
             questions = questionSet.size();
             setQuestionCount();
         }
-
+    }
+    public void addQuestions(View v){
+        Intent intent = new Intent(this, AddQuestionActivity.class);
+        startActivity(intent);
     }
     //filters out first QuestionSet  [question="default"; answer="default"]
     private void filterQuestionSet(){
@@ -58,7 +62,6 @@ public class MenuActivity extends Activity {
             if (q.getAnswer().equals("default"))
                 questionSet.remove(q);
         }
-
     }
     private void setSelectedCourse(String s){
         selectedCourse.setText("Course: " + s);
