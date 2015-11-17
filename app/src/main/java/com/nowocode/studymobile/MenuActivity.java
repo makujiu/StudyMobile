@@ -59,6 +59,8 @@ public class MenuActivity extends Activity {
         questions = questionSet.size()-1;
         setQuestionCount();
     }
+
+
     //User clicsk on Play Button
     public void play(View v){
         Intent intent = new Intent(this, GameActivity.class);
@@ -71,12 +73,12 @@ public class MenuActivity extends Activity {
         intent.putExtra("course",selCourse);
         startActivity(intent);
     }
-    //filters out first QuestionSet  [question="default"; answer="default"]
-    private void filterQuestionSet(){
-        for(QuestionSet q : questionSet) {
-            if (q.getAnswer().equals("default"))
-                questionSet.remove(q);
-        }
+
+    //User clicks on edit Button
+    public void edit(View v){
+        Intent intent = new Intent(this, EditActivity.class);
+        intent.putExtra("course", selCourse);
+        startActivity(intent);
     }
     private void setSelectedCourse(String s){
         selectedCourse.setText("Course: " + s);
