@@ -54,6 +54,13 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
         db.execSQL(query);
         db.close();
     }
+
+    public void deleteColumn(String question, String course){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("DELETE FROM " + QuestionDbContract.QuestionEntry.TABLE_NAME + " where question='" + question +"' and course='"
+        +course + "';");
+        db.close();
+    }
     public String[] getCourses(){
         String[] courses = null;
         ArrayList<String> tempResults = new ArrayList<>();

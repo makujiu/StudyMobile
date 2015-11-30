@@ -1,6 +1,7 @@
 package com.nowocode.studymobile;
 
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,9 @@ public class QuestionSetAdapter extends RecyclerView.Adapter<QuestionSetAdapter.
     public QuestionSetAdapter(ArrayList<QuestionSet> qs){
         questionSet = qs;
     }
+
+
+
     @Override
     public QuestionSetViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.
@@ -49,6 +53,13 @@ public class QuestionSetAdapter extends RecyclerView.Adapter<QuestionSetAdapter.
             super(v);
             questionTitle = (TextView) v.findViewById(R.id.questionTitle);
             answer = (TextView) v.findViewById(R.id.answerCard);
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), EditActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
     }
 }

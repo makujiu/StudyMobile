@@ -7,7 +7,7 @@
     android:padding="55dp"
     android:paddingTop="0dp"
     android:paddingStart="0dp"
-    android:background="#BBDEFB"
+    android:background="@color/background"
     android:alpha="1">
 
     <TextView
@@ -60,7 +60,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="30dp"
-        android:background="#90CAF9"
+        android:background="@color/buttonColor"
         android:textColor="#E3F2FD" />
 
     <LinearLayout
@@ -81,7 +81,7 @@
             android:layout_toEndOf="@+id/gameCountLabel"
             android:layout_marginLeft="30dp"
             android:textColor="#E3F2FD"
-            android:background="#90CAF9" />
+            android:background="@color/buttonColor" />
 
         <Button
             android:layout_width="100dp"
@@ -93,7 +93,7 @@
             android:layout_alignParentBottom="true"
             android:layout_toEndOf="@+id/answerLabel"
             android:layout_marginLeft="100dp"
-            android:background="#90CAF9"
+            android:background="@color/buttonColor"
             android:textColor="#E3F2FD" />
     </LinearLayout>
 

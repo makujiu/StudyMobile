@@ -2,12 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BBDEFB">
+    android:background="@color/background">
 
-<android.support.v7.widget.RecyclerView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tap the Question you want to edit\n Swipe to the side if you want to remove it"
+        android:id="@+id/textView4"
+        android:textColor="@color/buttonColor"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp" />
+
+    <android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/question_recycler_view"
-    />
+    android:background="@color/background"
+        android:layout_marginTop="30dp" />
 
 </LinearLayout>

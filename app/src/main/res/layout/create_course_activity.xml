@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BBDEFB">
+    android:background="@color/background">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,7 +13,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="80dp"
         android:textSize="35dp"
-        android:textColor="#E3F2FD" />
+        android:textColor="@color/buttonColor" />
 
     <EditText
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
         android:id="@+id/courseEditText"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="180dp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/buttonColor"
         android:textSize="35dp"
         android:textAlignment="center"
         android:inputType="text|textCapWords" />
@@ -33,7 +33,7 @@
         android:id="@+id/saveButton"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
-        android:background="#90CAF9"
+        android:background="@color/buttonColor"
         android:textColor="#E3F2FD"
         android:textSize="20dp"
         android:onClick="saveCourse"
