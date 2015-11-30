@@ -35,6 +35,8 @@ public class QuestionSetAdapter extends RecyclerView.Adapter<QuestionSetAdapter.
         QuestionSet question = questionSet.get(i);
         holder.questionTitle.setText(question.getQuestion());
         holder.answer.setText(question.getAnswer());
+
+        holder.course = questionSet.get(0).getCourse();
     }
 
     @Override
@@ -48,6 +50,7 @@ public class QuestionSetAdapter extends RecyclerView.Adapter<QuestionSetAdapter.
     public static class QuestionSetViewHolder extends RecyclerView.ViewHolder{
         protected TextView questionTitle;
         protected TextView answer;
+        protected String course;
 
         public QuestionSetViewHolder(View v){
             super(v);
@@ -56,7 +59,10 @@ public class QuestionSetAdapter extends RecyclerView.Adapter<QuestionSetAdapter.
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), EditActivity.class);
+                    Intent intent = new Intent(v.getContext(), EditQuestionActivity.class);
+                    intent.putExtra("question", questionTitle.getText());
+                    intent.putExtra("answer", answer.getText());
+                    intent.putExtra("course", course);
                     v.getContext().startActivity(intent);
                 }
             });

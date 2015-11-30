@@ -14,4 +14,10 @@
     <string name="hideButton">hide</string>
     <string name="saveButton">Save</string>
     <string name="selectButton">Select</string>
+    <string name="editQuestionText">custom Question</string>
+    <string name="editAnswerText">custom Answer</string>
+    <string name="nextButtonText">Next</string>
+    <string name="editButtonSaveText">Save</string>
+    <string name="editAnswerActivityTitle">Edit Answer</string>
+    <string name="editQuestionActivityTitle">Edit Question</string>
 </resources>

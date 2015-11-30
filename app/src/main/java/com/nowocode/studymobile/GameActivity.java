@@ -21,7 +21,7 @@ public class GameActivity extends Activity {
     int showAnswerFlag = 0;
     QuestionDbHelper dbHelper = new QuestionDbHelper(this);
     // index = 1 because the 0th element of the array is the default entry
-    private int index = 1;
+    private int index = 0;
     private String course;
 
     @Override
@@ -77,7 +77,7 @@ public class GameActivity extends Activity {
 
     //Method called when clicking prev Button
     public void prevClick(View view){
-        if(index > 1 && index < questionSet.size()) {
+        if(index > 0 && index < questionSet.size()) {
             showAnswer(false);
             index--;
             setTextLabels();
@@ -87,7 +87,7 @@ public class GameActivity extends Activity {
 
     //Method called when clicking Next Button
     public void nextClick(View view){
-        if(index >= 1 && index < questionSet.size()-1) {
+        if(index >= 0 && index < questionSet.size()-1) {
             index++;
             showAnswer(false);
             setTextLabels();

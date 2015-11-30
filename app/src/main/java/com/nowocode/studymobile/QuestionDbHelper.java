@@ -55,12 +55,26 @@ public class QuestionDbHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    // QuestionSet gets referenced by Course and Answer
+    public void updateEntry(String course, String answer,
+                            String newQuestion, String newAnswer){
+        String query = "UPDATE " + QuestionDbContract.QuestionEntry.TABLE_NAME + " SET "+
+                QuestionDbContract.QuestionEntry.COLUMN_NAME_QUESTION+"='"+newQuestion+"'," +
+                QuestionDbContract.QuestionEntry.COLUMN_NAME_ANSWER+" ='"+newAnswer+
+                "' where " + QuestionDbContract.QuestionEntry.COLUMN_NAME_ANSWER + " = '" + answer +
+                "' and " + QuestionDbContract.QuestionEntry.COLUMN_NAME_COURSE + "='" + course + "';";
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL(query);
+        db.close();
+
+    }
     public void deleteColumn(String question, String course){
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("DELETE FROM " + QuestionDbContract.QuestionEntry.TABLE_NAME + " where question='" + question +"' and course='"
         +course + "';");
         db.close();
     }
+
     public String[] getCourses(){
         String[] courses = null;
         ArrayList<String> tempResults = new ArrayList<>();

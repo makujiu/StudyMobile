@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/editQuestionActivityTitle"
-        android:id="@+id/EditQuestionActivityTitle"
+        android:text="@string/editAnswerActivityTitle"
+        android:id="@+id/editAnswerActivity"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.16"
         android:textColor="@color/buttonColor"
@@ -19,9 +19,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editQuestionTextMain"
+        android:id="@+id/editAnswerTextMain"
         android:layout_weight="0.16"
-        android:text="@string/editQuestionText"
+        android:text="@string/editAnswerText"
         android:textColor="@color/buttonColor"
         android:textSize="25dp"
         android:editable="true"
@@ -36,13 +36,11 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="0dp"
-        android:text="@string/nextButtonText"
-        android:id="@+id/EditButtonNext"
+        android:text="@string/editButtonSaveText"
+        android:id="@+id/EditButtonSave"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.16"
         android:background="@color/buttonColor"
         android:textColor="@color/buttonTextColor"
-        android:textSize="20dp"
-        android:layout_weight="0.16"
-        android:singleLine="false"
-        android:layout_gravity="center_horizontal"
-        android:onClick="editAnswer" />
+        android:onClick="saveEdit" />
 </LinearLayout>
